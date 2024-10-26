@@ -44,6 +44,7 @@ def max(x: float, y: float) -> float:
     "$f(x) =$ x if x is greater than y else y"
     return x if x >= y else y
 
+
 def is_close(x: float, y: float) -> float:
     "$f(x) = |x - y| < 1e-2$"
     return 1.0 if abs(x - y) < 1e-2 else 0.0
@@ -61,7 +62,7 @@ def sigmoid(x: float) -> float:
 
     for stability.
     """
-    return 1.0 / (1.0 + math.exp(-x)) if x >=0 else math.exp(x) / (1.0 + math.exp(x))
+    return 1.0 / (1.0 + math.exp(-x)) if x >= 0 else math.exp(x) / (1.0 + math.exp(x))
 
 
 def relu(x: float) -> float:
@@ -70,10 +71,11 @@ def relu(x: float) -> float:
 
     (See https://en.wikipedia.org/wiki/Rectifier_(neural_networks) .)
     """
-    return x if x >=0 else 0
+    return x if x >= 0 else 0
 
 
 EPS = 1e-6
+
 
 def log(x: float) -> float:
     "$f(x) = log(x)$"
